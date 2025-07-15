@@ -1,6 +1,7 @@
+import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
-
+import { app } from "./app.js";
 dotenv.config()
 
 connectDB()
@@ -12,5 +13,8 @@ connectDB()
     })
 })
 .catch((err) => {
-    console.log("MongoDB connect fail")
-})
+  console.error('❌ MongoDB connection failed:', err.message);
+  console.error(err);           
+  process.exit(1);    
+});
+
