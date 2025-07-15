@@ -1,5 +1,5 @@
 import multer from "multer";
-import { uploadOnCloudinary } from "../utils/cloudinary";
+import { uploadOnCloudinary } from "../utils/cloudinary.js";
 
 const storage = multer.diskStorage({
     destination: function(req, res, cb) {
