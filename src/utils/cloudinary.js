@@ -18,7 +18,8 @@ dotenv.config();
                 resource_type: "auto"
             })
             //file uploaded
-            console.log("file has been uploaded on cloudinary", response.url);
+            // console.log("file has been uploaded on cloudinary", response.url);
+            fs.unlinkSync(localFilePath)
             return response;
         }
         catch (error) {
