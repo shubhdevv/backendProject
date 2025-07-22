@@ -14,6 +14,4 @@ const subscriptionSchema = new Schema({
 
 
 
-
-
 export const subscription = mongoose.model("Subscription", subscriptionSchema)
